@@ -1,0 +1,97 @@
+<div class="container">
+  <div class="leftSide">
+    <div class="leftCurve">
+      <div class="blueLight">
+        <div class="blueLightReflect"></div>
+      </div>
+      <div class="redLight"></div>
+      <div class="yellowLight"></div>
+      <div class="greenLight"></div>
+    </div>
+    <div class="middleCurve"></div>
+    <div class="rightCurve"></div>
+    <div class="frameScreen">
+      <div class="screen">
+        <div class="list" *ngFor="let pokemon of repository.listaPokemon">
+          <ul>
+            <li class="animating" >
+                <a (click)="onClickMe(pokemon.id)">
+                  {{pokemon.name}}
+                </a>
+            </li>
+          </ul>
+        </div>
+        <div class="searching">
+          <span class="name"></span><br>
+          <div class="img">
+            <img src="" alt="" class="pokeImage" />
+          </div>
+        </div>
+      </div>
+      <div class="errorScreen"><p>404 ERROR :<br/>Pokemon not Found</p><p class="sad"> :( </p>
+      </div>
+      <div class="redDot"></div>
+      <div class="grill"></div>
+    </div>
+    <div class="buttons">
+      <div class="blueButton"><p>Shiny</p></div>
+      <div class="start"><p>Front</p></div>
+      <div class="select"><p>Back</p></div>
+      </div>
+      <div class="input">
+        <p> RESEARCH:</p>
+        <input class="trueInput" type="text" name="search" autocomplete="off"placeholder="Pokemon name or number" />
+      </div>
+      <div class="cross"></div>
+    <div class="articulation"></div>
+  </div>
+  <div class="rightSide">
+    <div class="description">
+      <p>Description</p>
+      <p class="descriptionText"></p>
+    </div>
+    <div class="types">
+      <p>Types</p>
+      <p class="typeText"></p>
+    </div>
+    <div class="height">
+      <p>Height</p>
+      <p class="heightText"></p>
+    </div>
+    <div class="weight">
+      <p>Weight</p>
+      <p class="weightText"></p>
+    </div>
+    <div class="stats">
+      <p>Statistics</p>
+      <div class="statFrame">
+        <div class="frame firstFrame">
+          <div class="SpD"></div>
+        </div>
+        <div class="frame secondFrame">
+          <div class="ATK"></div>
+        </div>
+        <div class="frame thirdFrame">
+          <div class="DEF"></div>
+        </div>
+        <div class="frame fourthFrame">
+          <div class="SPD"></div>
+        </div>
+        <div class="frame fifthFrame">
+          <div class="SpA"></div>
+        </div>
+        <div class="frame sixthFrame">
+          <div class="HP"></div>
+        </div>
+      </div>
+     <div class="cara">
+      <p>HP</p>
+      <p>ATK</p>
+      <p>DEF</p>
+      <p>SPE</p>
+      <p>SpA</p>
+      <p>SpD</p>
+     </div>
+    </div>
+  </div>
+</div>
